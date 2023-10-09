@@ -30,3 +30,20 @@ const questionSet = [
     correctAnswer: "BHX",
     incorrectAnswers: ["BHM", "BIR", "BGM"]},
 ]
+
+console.log(questionSet);
+console.log(questionSet[1].question);
+console.log(questionSet[1].correctAnswer);
+console.log(questionSet[1].incorrectAnswers);
+
+/* Main game function */
+function runGame() {
+    document.getElementById("airport").textContent = questionSet[1].question;
+    let answerSet = [].concat(questionSet[1].correctAnswer, questionSet[1].incorrectAnswers);
+    for (var i = 0; i < 4; i++)
+    {
+      document.getElementsByClassName('answer')[i].textContent = answerSet[i];
+    }
+}
+
+runGame();
