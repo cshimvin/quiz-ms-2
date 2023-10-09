@@ -1,4 +1,4 @@
-/** Question and answer set for the quiz **/
+/** Question and answer set for the quiz */
 const questionSet = [
     {question: "Toronto",
     correctAnswer: "YYZ",
@@ -34,7 +34,7 @@ const questionSet = [
 
 /** Array randomiser
  * taken from W3docs https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
-**/
+*/
 function randomise(values) {
     let index = values.length,
     randomIndex;
@@ -49,32 +49,44 @@ function randomise(values) {
     return values;
 }
 
-/** Main game function **/
+/** Main game function */
 function runGame() {
-    let answerSet = [].concat(questionSet[7].correctAnswer, questionSet[7].incorrectAnswers);
+    getQuestionData(10);
+}
+
+/** Get question data from object */
+function getQuestionData(questionNum) {
+    questionIsValid(questionNum);
+    let answerSet = [].concat(questionSet[questionNum].correctAnswer, questionSet[questionNum].incorrectAnswers);
     let shuffledAnswers = randomise(answerSet);
-    displayQuestion(7);
+    displayQuestion(questionNum);
     displayAnswers(shuffledAnswers);
 }
 
-/** Display the question destination **/
+/** Display the question destination */
 function displayQuestion(questionNum) {
-    // Test question number is valid
-    if (questionNum > 9 || questionNum < 0) {
-        alert("Invalid question set");
-        throw new Error("Question number needs to be between 0 and 9");
-    } 
-    document.getElementById("airport").textContent = questionSet[questionNum].question;
+    questionIsValid(questionNum)
+    $("#airport").text(questionSet[questionNum].question);
 }
 
-/** Display the answer options **/
-function displayAnswers(answers) {
-    for (var i = 0; i < 4; i++) {
-        document.getElementsByClassName('answer')[i].textContent = answers[i];
+/** Test question number is valid */
+function questionIsValid(questionNum) {
+    if (questionNum > 9 || questionNum < 0) {
+    alert("Invalid question set");
+    throw new Error("Question number needs to be between 0 and 9");
     }
 }
 
-/** Check if user's answer is correct **/
+/** Display the answer options */
+function displayAnswers(answers) {
+    for (var i = 0; i < 4; i++) {
+        var answerId = i+1;
+        var answerDiv = ".answer" + answerId;
+        $(answerDiv).html(answers[i]);
+    }
+}
+
+/** Check if user's answer is correct */
 function checkAnswer() {
 
 }
