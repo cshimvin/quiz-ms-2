@@ -1,3 +1,4 @@
+/** Question and answer set for the quiz **/
 const questionSet = [
     {question: "Toronto",
     correctAnswer: "YYZ",
@@ -31,40 +32,52 @@ const questionSet = [
     incorrectAnswers: ["BHM", "BIR", "BGM"]},
 ]
 
-console.log(questionSet);
-console.log(questionSet[1].question);
-console.log(questionSet[1].correctAnswer);
-console.log(questionSet[1].incorrectAnswers);
-
 /** Array randomiser
  * taken from W3docs https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
 **/
 function randomise(values) {
     let index = values.length,
-      randomIndex;
-  
+    randomIndex;
     // While there remain elements to shuffle.
     while (index != 0) {
-      // Pick a remaining element.
-      randomIndex = Math.floor(Math.random() * index);
-      index--;
-  
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * index);
+    index--;
       // And swap it with the current element.
-      [values[index], values[randomIndex]] = [values[randomIndex], values[index]];
+    [values[index], values[randomIndex]] = [values[randomIndex], values[index]];
     }
-  
     return values;
-  }
+}
 
 /** Main game function **/
 function runGame() {
-    document.getElementById("airport").textContent = questionSet[1].question;
-    let answerSet = [].concat(questionSet[1].correctAnswer, questionSet[1].incorrectAnswers);
+    let answerSet = [].concat(questionSet[7].correctAnswer, questionSet[7].incorrectAnswers);
     let shuffledAnswers = randomise(answerSet);
-    for (var i = 0; i < 4; i++)
-    {
-      document.getElementsByClassName('answer')[i].textContent = shuffledAnswers[i];
+    displayQuestion(7);
+    displayAnswers(shuffledAnswers);
+}
+
+/** Display the question destination **/
+function displayQuestion(questionNum) {
+    // Test question number is valid
+    if (questionNum > 9 || questionNum < 0) {
+        alert("Invalid question set");
+        throw new Error("Question number needs to be between 0 and 9");
+    } 
+    document.getElementById("airport").textContent = questionSet[questionNum].question;
+}
+
+/** Display the answer options **/
+function displayAnswers(answers) {
+    for (var i = 0; i < 4; i++) {
+        document.getElementsByClassName('answer')[i].textContent = answers[i];
     }
 }
+
+/** Check if user's answer is correct **/
+function checkAnswer() {
+
+}
+
 
 runGame();
