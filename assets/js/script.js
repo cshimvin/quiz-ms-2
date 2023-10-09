@@ -36,13 +36,34 @@ console.log(questionSet[1].question);
 console.log(questionSet[1].correctAnswer);
 console.log(questionSet[1].incorrectAnswers);
 
-/* Main game function */
+/** Array randomiser
+ * taken from W3docs https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
+**/
+function randomise(values) {
+    let index = values.length,
+      randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (index != 0) {
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * index);
+      index--;
+  
+      // And swap it with the current element.
+      [values[index], values[randomIndex]] = [values[randomIndex], values[index]];
+    }
+  
+    return values;
+  }
+
+/** Main game function **/
 function runGame() {
     document.getElementById("airport").textContent = questionSet[1].question;
     let answerSet = [].concat(questionSet[1].correctAnswer, questionSet[1].incorrectAnswers);
+    let shuffledAnswers = randomise(answerSet);
     for (var i = 0; i < 4; i++)
     {
-      document.getElementsByClassName('answer')[i].textContent = answerSet[i];
+      document.getElementsByClassName('answer')[i].textContent = shuffledAnswers[i];
     }
 }
 
