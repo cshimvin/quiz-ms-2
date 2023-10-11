@@ -1,39 +1,115 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome,
+# Milestone Project 2: Airport Codes Quiz
+Website shown on various devices
+## Live project
+View the live project.
+## Table of Contents
+1. [Project Goals](#project-goals)
+- Business Goals
+- User Goals
+2. [User Experience](#user-experience)
+- User Stories
+- Design and Structure
+- Wireframes
+3. [Features](#features)
+- Must Have (current features)
+- Could Have
+- Won't Have (for now)
+4. [Technologies Used](#technologies-used)
+5. [Testing](#testing)
+- User stories tests
+- Functionality
+- HTML Validation
+- CSS Validation
+- JS Validation
+- Accessibility and Performance
+- Browser Compatibility
+- Device Compatibility
+6. [Bugs](#bugs)
+7. [Deployment](#deployment)
+8. [Credits](#credits)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Project Goals
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+### Business Goals
 
-## Codeanywhere Reminders
+As a business, I would like the website to:
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+### Visitor Goals
 
-`python3 -m http.server`
+As a visitor, I would like the website to:
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## User Experience
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+### User Stories
+- First time visitor goals
 
-`http_server`
+- Returning visitor goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+- Frequent visitor goals
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### Design and Structure
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Wireframes
 
-To log into the Heroku toolbelt CLI:
+Wireframes of the initial design can be found in the PDF.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Features
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Current features
 
----
+These are the features that have already been implemented on the website.
 
-Happy coding!
+
+### Features the site could have
+
+### Features the site won't have (for now)
+
+## Technologies Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5) to create the website.
+- [CSS3](https://en.wikipedia.org/wiki/CSS3) to style the website.
+- [Bootstrap 5](https://getbootstrap.com/) was used for the layout of the site.
+- [FontAwesome](https://fontawesome.com/) was used to create some of the icons on the site.
+- [Google Fonts](https://fonts.google.com/) was used to display the typography of the site: [Montserrat](https://fonts.google.com/specimen/Montserrat) and [REM](https://fonts.google.com/specimen/REM).
+- [Git](https://git-scm.com/) was used for version control of the code.
+- [GitHub](https://github.com/) was used as a repository for the code and GitHub pages was used to host the site.
+
+## Testing
+
+###  User stories tests
+
+### Functionality
+
+
+### HTML Validation
+
+### CSS Validation
+
+### JS Validation
+
+### Accessibility and Performance
+
+### Browser Compatibility
+### Device Compatibility
+
+### Check links work
+
+## Bugs
+
+Bugs fixed:
+Issue with incrementing questions and checkAnswer function
+
+## Deployment
+
+### How the site was deployed
+
+
+### How to clone this repository
+
+
+## Credits
+
+### Images
+
+### Code
