@@ -53,27 +53,19 @@ function randomise(values) {
 
 let score = 0;
 let questionNum = 0;
+let answerButtons = "#answer1, #answer2, #answer3, #answer4";
 
 /** Main game function */
 function runGame() {
     if (questionNum > 9) {
         endGame();
     } else {
-        let answerButtons = "#answer1, #answer2, #answer3, #answer4";
         $(answerButtons).prop("disabled", false);
         $("#next-question").prop("disabled", true);
         getQuestionData(questionNum);
         displayQuestion(questionNum);
         displayAnswers(questionNum);
-        $(answerButtons).click(function () {
-            if (checkAnswer(this.id, questionNum)) {
-                score++;
-            };
-            $(answerButtons).prop("disabled", true);
-            $("#next-question").prop("disabled", false);
-            $("#current-score").text(score);
-            nextButton();
-        });  
+        nextButton();
     }
 }
 
@@ -83,7 +75,6 @@ function endGame(score) {
 
 function nextButton() {
     $("#next-question").click(function () {
-        console.log(questionNum);
         runGame();
     });
 }
@@ -100,7 +91,7 @@ function getQuestionData(questionNum) {
 /** Display the question destination */
 function displayQuestion(questionNum) {
     questionIsValid(questionNum);
-    
+
     $("#question-number").text(`Question number ${questionNum+1}`);
     $("#airport").text(questionSet[questionNum].question);
 }
@@ -118,15 +109,17 @@ function displayAnswers(answers) {
     for (var i = 0; i < 4; i++) {
         var answer = i + 1;
         var answerDiv = "answer" + answer;
+        console.log("Clicked answer:" + answerDiv)
+        console.log(answer);
         var answerId = "#" + answerDiv;
         $(answerId).text(answers[i]);
-        document.getElementById(answerDiv).addEventListener("click", () => checkAnswer(answerDiv, questionNum));
+        // document.getElementById(answerDiv).addEventListener("click", () => checkAnswer(answerDiv, questionNum));
     }
 }
 
 /** Check if user's answer is correct */
-function checkAnswer(id, questionNum) {
-    let answerId = "#" + id;
+function checkAnswer(id) {
+    let answerId = "#answer" + id; 
     let answerSelected = $(answerId).text();
     let correctAnswer = questionSet[questionNum].correctAnswer;
     if (correctAnswer === answerSelected) {
@@ -135,7 +128,10 @@ function checkAnswer(id, questionNum) {
     } else {
         $("#result").html(`<p>Wrong, I'm afraid. The correct answer is ${correctAnswer}</p>`)
     }
-    questionNum = questionNum + 1;
+    $(answerButtons).prop("disabled", true);
+    $("#next-question").prop("disabled", false);
+    $("#current-score").text(score);
+    questionNum++;
 }
 
 runGame();
