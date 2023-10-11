@@ -57,7 +57,7 @@ function runGame() {
     displayQuestion(questionNum);
     displayAnswers(questionNum);
     $("#answer1, #answer2, #answer3, #answer4").click(function () {
-        checkAnswer(this.id);
+        checkAnswer(this.id, questionNum);
     });
 }
 
@@ -95,9 +95,14 @@ function displayAnswers(answers) {
 }
 
 /** Check if user's answer is correct */
-function checkAnswer(id) {
-    let answerSelected = "#" + id;
-    alert($(answerSelected).text())
+function checkAnswer(id, questionNum) {
+    let answerId = "#" + id;
+    let answerSelected = $(answerId).text();
+    if (questionSet[questionNum].correctAnswer === answerSelected) {
+        alert("Correct");
+    } else {
+        alert("Wrong");
+    }
 }
 
 runGame();
