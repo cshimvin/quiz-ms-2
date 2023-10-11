@@ -75,6 +75,7 @@ function endGame(score) {
 
 function nextButton() {
     $("#next-question").click(function () {
+        $("#result").text("");
         runGame();
     });
 }
