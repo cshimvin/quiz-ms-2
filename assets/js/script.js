@@ -32,7 +32,7 @@ const questionSet = [
     incorrectAnswers: ["BHM", "BIR", "BGM"]},
 ]
 
-/** Array randomiser
+/** Shuffle answer order - Array randomiser
  * taken from W3docs https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
 */
 function randomise(values) {
@@ -51,7 +51,14 @@ function randomise(values) {
 
 /** Main game function */
 function runGame() {
-    getQuestionData(10);
+    let score = 0;
+    let questionNum = 0;
+    getQuestionData(questionNum);
+    displayQuestion(questionNum);
+    displayAnswers(questionNum);
+    $("#answer1, #answer2, #answer3, #answer4").click(function () {
+        checkAnswer(this.id);
+    });
 }
 
 /** Get question data from object */
@@ -65,7 +72,8 @@ function getQuestionData(questionNum) {
 
 /** Display the question destination */
 function displayQuestion(questionNum) {
-    questionIsValid(questionNum)
+    questionIsValid(questionNum);
+    $("#question-number").text(`Question number ${questionNum+1}`);
     $("#airport").text(questionSet[questionNum].question);
 }
 
@@ -81,15 +89,15 @@ function questionIsValid(questionNum) {
 function displayAnswers(answers) {
     for (var i = 0; i < 4; i++) {
         var answerId = i+1;
-        var answerDiv = ".answer" + answerId;
-        $(answerDiv).html(answers[i]);
+        var answerDiv = "#answer" + answerId;
+        $(answerDiv).text(answers[i]);
     }
 }
 
 /** Check if user's answer is correct */
-function checkAnswer() {
-
+function checkAnswer(id) {
+    let answerSelected = "#" + id;
+    alert($(answerSelected).text())
 }
-
 
 runGame();
