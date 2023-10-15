@@ -57,6 +57,20 @@ let answerButtons = "#answer1, #answer2, #answer3, #answer4";
 
 /** Main game function */
 function runGame() {
+    gameHTML = `<h5 id="question-number" class="card-header"></h5>
+    <p class="card-body">What is the airport code for <span id="airport"></span>?</p>
+    <button type="button" class="mb-2 answer btn btn-primary" id="answer1" onclick="checkAnswer(1)"></button>
+    <button type="button" class="mb-2 answer btn btn-primary" id="answer2" onclick="checkAnswer(2)"></button>
+    <button type="button" class="mb-2 answer btn btn-primary" id="answer3" onclick="checkAnswer(3)"></button>
+    <button type="button" class="mb-2 answer btn btn-primary" id="answer4" onclick="checkAnswer(4)"></button>
+    <div id="result">&nbsp;</div>
+    <div id="nav-buttons">
+        <button type="button" class="btn btn-dark" id="next-question">Next question</button>
+    </div>
+    <div id="score"><p>Current score : <span id="current-score">${score}</span> out of 10.</p></div>
+    `
+    $(".question-box").html("");
+    $(".question-box").html(gameHTML);
     if (questionNum > 9) {
         endGame();
     } else {
@@ -153,4 +167,3 @@ function checkAnswer(id) {
     questionNum++;
 }
 
-runGame();

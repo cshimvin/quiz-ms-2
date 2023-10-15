@@ -21,19 +21,12 @@
         </div>
     </header>
     <div class="row">
-    <div class="card text-center w-50 mx-auto question-box">
-                <h5 id="question-number" class="card-header"></h5>
-                    <p class="card-body">What is the airport code for <span id="airport"></span>?</p>
-                    <button type="button" class="mb-2 answer btn btn-primary" id="answer1" onclick="checkAnswer(1)"></button>
-                    <button type="button" class="mb-2 answer btn btn-primary" id="answer2" onclick="checkAnswer(2)"></button>
-                    <button type="button" class="mb-2 answer btn btn-primary" id="answer3" onclick="checkAnswer(3)"></button>
-                    <button type="button" class="mb-2 answer btn btn-primary" id="answer4" onclick="checkAnswer(4)"></button>
-                    <div id="result">&nbsp;</div>
-                    <div id="nav-buttons">
-                        <button type="button" class="btn btn-dark" id="next-question">Next question</button>
-                    </div>
-                    <div id="score"><p>Current score : <span id="current-score">0</span> out of 10.</p></div>
-            
+        <div class="card text-center w-50 mx-auto question-box">
+                <h5 id="question-number" class="card-header">Welcome to the Airport Codes Quiz</h5>
+                    <p class="card-body">How well do you know your airport codes?</p>
+                    <p class="card-body">Answer 10 questions to find out if you are a travel novice or travel expert.</p>
+                    <button type="button" class="mb-2 answer btn btn-primary" onclick="runGame()">Start game</button>
+                    <button type="button" class="mb-2 answer btn btn-secondary" onclick="viewInstructions()">View instructions</button>            
         </div>
     </div>
 
