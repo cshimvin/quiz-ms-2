@@ -55,9 +55,18 @@ let score = 0;
 let questionNum = 0;
 let answerButtons = "#answer1, #answer2, #answer3, #answer4";
 
+/** Instructions for the game */
+function viewInstructions() {
+    let instructionsHTML = `<h5 id="question-number" class="card-header">Instructions</h5>
+    <p class="card-body">This quiz about airport codes consists of 10 questions. Each question gives you the name of an airport and there are 4 options to choose from. Select which answer you think is correct then press the next question button. The codes have been taken from the <a href="https://www.iata.org/en/services/codes/" target="_blank">IATA airport code standard.</a></p>
+    <p class="card-body">Do you have what it takes? Take the quiz now!</p>
+    <button type="button" class="mb-2 answer btn btn-primary" onclick="runGame()">Start game</button>`
+    $(".question-box").html(instructionsHTML);
+}
+
 /** Main game function */
 function runGame() {
-    gameHTML = `<h5 id="question-number" class="card-header"></h5>
+    let gameHTML = `<h5 id="question-number" class="card-header"></h5>
     <p class="card-body">What is the airport code for <span id="airport"></span>?</p>
     <button type="button" class="mb-2 answer btn btn-primary" id="answer1" onclick="checkAnswer(1)"></button>
     <button type="button" class="mb-2 answer btn btn-primary" id="answer2" onclick="checkAnswer(2)"></button>
