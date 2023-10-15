@@ -30,7 +30,7 @@ const questionSet = [
     {question: "Birmingham",
     correctAnswer: "BHX",
     incorrectAnswers: ["BHM", "BIR", "BGM"]},
-]
+];
 
 /** Shuffle answer order - Array randomiser
  * taken from W3docs https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
@@ -69,8 +69,26 @@ function runGame() {
     }
 }
 
-function endGame(score) {
-    
+function endGame() {
+    let resultHTML = `<h5 id="question-number" class="card-header">Game over!</h5>
+<h6 class="card-body final-score"></h6>
+<div id="score"></div>`;
+    $(".question-box").html("");
+    $(".question-box").html(resultHTML);
+    if (score === 10) {
+        $(".final-score").text("You are a seasoned traveller!");
+    } else if (score >= 8) {
+        $(".final-score").text("You have managed to land at your destination");
+    } else if (score >= 6) {
+        $(".final-score").text("You failed to get through customs");
+    } else if (score >= 4) {
+        $(".final-score").text("You didn't manage to get on the plane");
+    } else if (score >= 2) {
+        $(".final-score").text("You couldn't find the airport");
+    } else {
+        $(".final-score").text("You didn't even make it out of your front door");
+    };
+    $("#score").text("Your result is " + score + " out of 10");
 }
 
 function nextButton() {
