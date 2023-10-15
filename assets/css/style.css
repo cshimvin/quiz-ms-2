@@ -1,7 +1,18 @@
 body {
-    background-color: lightskyblue !important;
+    background: url("../image/aircraft-bg.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     font-family: 'AR One Sans', sans-serif;
-    
+}
+
+h1 {
+    color: white;
+}
+
+section {
+    padding: 2rem;
 }
 
 .quiz-box {

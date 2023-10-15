@@ -94,8 +94,8 @@ function runGame() {
 
 function endGame() {
     let resultHTML = `<h5 id="question-number" class="card-header">Game over!</h5>
-<h6 class="card-body final-score"></h6>
-<div id="score"></div>`;
+    <h6 class="card-body final-score"></h6>
+    <div id="score"></div><button type="button" class="mb-2 answer btn btn-primary" onclick="runGame()">Try again</button>`;
     $(".question-box").html("");
     $(".question-box").html(resultHTML);
     if (score === 10) {
@@ -112,6 +112,10 @@ function endGame() {
         $(".final-score").text("You didn't even make it out of your front door");
     };
     $("#score").text("Your result is " + score + " out of 10");
+    score = 0;
+    questionNum = 0;
+    answerButtons = "#answer1, #answer2, #answer3, #answer4";
+
 }
 
 function nextButton() {
