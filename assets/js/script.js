@@ -52,7 +52,7 @@ function randomise(values) {
 /** Initialise the game */
 
 let score = 0;
-let questionNum = 8;
+let questionNum = 0;
 let answerButtons = "#answer1, #answer2, #answer3, #answer4";
 
 /** Instructions for the game */
