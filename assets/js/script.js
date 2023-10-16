@@ -52,7 +52,7 @@ function randomise(values) {
 /** Initialise the game */
 
 let score = 0;
-let questionNum = 0;
+let questionNum = 8;
 let answerButtons = "#answer1, #answer2, #answer3, #answer4";
 
 /** Instructions for the game */
@@ -159,7 +159,9 @@ function displayAnswers(answers) {
         console.log(answer);
         var answerId = "#" + answerDiv;
         $(answerId).text(answers[i]);
-        // document.getElementById(answerDiv).addEventListener("click", () => checkAnswer(answerDiv, questionNum));
+    }
+    if (questionNum === 9) {
+    $("#nav-buttons").html('<button type="button" class="btn btn-dark" disabled="true" id="next-question">View results</button>')
     }
 }
 
