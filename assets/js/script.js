@@ -1,3 +1,5 @@
+/*jslint maxlen: 130 */
+
 /** Question and answer set for the quiz */
 const questionSet = [
     {question: "Toronto",
@@ -29,14 +31,14 @@ const questionSet = [
     incorrectAnswers: ["LON", "LDN", "LHW"]},
     {question: "Birmingham",
     correctAnswer: "BHX",
-    incorrectAnswers: ["BHM", "BIR", "BGM"]},
+    incorrectAnswers: ["BHM", "BIR", "BGM"]}
 ];
 
 /** Shuffle answer order - Array randomiser
  * taken from W3docs https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
 */
 function randomise(values) {
-    let index = values.length,
+    let index = values.length;
     randomIndex;
     // While there remain elements to shuffle.
     while (index != 0) {
@@ -60,7 +62,7 @@ function viewInstructions() {
     let instructionsHTML = `<h5 id="question-number" class="card-header">Instructions</h5>
     <p class="card-body">This quiz about airport codes consists of 10 questions. Each question gives you the name of an airport and there are 4 options to choose from. Select which answer you think is correct then press the next question button. The codes have been taken from the <a href="https://www.iata.org/en/services/codes/" target="_blank">IATA airport code standard.</a></p>
     <p class="card-body">Do you have what it takes? Take the quiz now!</p>
-    <button type="button" class="mb-2 answer btn btn-primary" onclick="runGame()">Start game</button>`
+    <button type="button" class="mb-2 answer btn btn-primary" onclick="runGame()">Start game</button>`;
     $(".question-box").html(instructionsHTML);
 }
 
@@ -76,8 +78,7 @@ function runGame() {
     <div id="nav-buttons">
         <button type="button" class="mb-1 btn btn-dark" id="next-question">Next question</button>
     </div>
-    <div id="score"><p>Current score : <span id="current-score">${score}</span> out of 10.</p></div>
-    `
+    <div id="score"><p>Current score : <span id="current-score">${score}</span> out of 10.</p></div>`;
     $(".question-box").html("");
     $(".question-box").html(gameHTML);
     if (questionNum > 9) {
@@ -110,7 +111,7 @@ function endGame() {
         $(".final-score").text("You couldn't find the airport");
     } else {
         $(".final-score").text("You didn't even make it out of your front door");
-    };
+    }
     $("#score").text("Your result is " + score + " out of 10");
     score = 0;
     questionNum = 0;
@@ -167,7 +168,7 @@ function displayAnswers(answers) {
 
 /** Check if user's answer is correct */
 function checkAnswer(id) {
-    let answerId = "#answer" + id; 
+    let answerId = "#answer" + id;
     let answerSelected = $(answerId).text();
     let correctAnswer = questionSet[questionNum].correctAnswer;
     if (correctAnswer === answerSelected) {
