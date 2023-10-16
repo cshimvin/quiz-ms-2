@@ -173,9 +173,11 @@ function checkAnswer(id) {
     let correctAnswer = questionSet[questionNum].correctAnswer;
     if (correctAnswer === answerSelected) {
         $("#result").html(`<p>Correct! Well done!</p>`)
+        $(answerId).addClass("btn-success");
         score = score + 1;
     } else {
         $("#result").html(`<p>Wrong, I'm afraid. The correct answer is ${correctAnswer}</p>`)
+        $(answerId).addClass("btn-danger");
     }
     $(answerButtons).prop("disabled", true);
     $("#next-question").prop("disabled", false);
