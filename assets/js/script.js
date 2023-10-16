@@ -74,7 +74,7 @@ function runGame() {
     <button type="button" class="mb-2 answer btn btn-primary" id="answer4" onclick="checkAnswer(4)"></button>
     <div id="result">&nbsp;</div>
     <div id="nav-buttons">
-        <button type="button" class="btn btn-dark" id="next-question">Next question</button>
+        <button type="button" class="mb-1 btn btn-dark" id="next-question">Next question</button>
     </div>
     <div id="score"><p>Current score : <span id="current-score">${score}</span> out of 10.</p></div>
     `

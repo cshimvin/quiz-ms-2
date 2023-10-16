@@ -15,12 +15,3 @@ section {
     padding: 2rem;
 }
 
-.quiz-box {
-    width: 90%;
-    border-radius: 25px;
-    padding: 0px;
-    margin-bottom: 20px;
-    background-color: lightblue;
-    margin-left: auto;
-    margin-right: auto;
-}
