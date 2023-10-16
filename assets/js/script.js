@@ -38,7 +38,7 @@ const questionSet = [
  * taken from W3docs https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
 */
 function randomise(values) {
-    let index = values.length;
+    let index = values.length,
     randomIndex;
     // While there remain elements to shuffle.
     while (index != 0) {
