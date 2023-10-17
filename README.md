@@ -83,12 +83,33 @@ These are the features that have already been implemented on the website.
 
 ###  User stories tests
 
+| User story                                                            | Outcome                                                                        | Result |
+| --------------------------------------------------------------------- | ------------------------------------------------------------------------------ | ------ |
+| As a visitor, I would like to easily find out about the site is about | As a visitor, I can understand that this is a quiz website about airport codes | PASS   |
+| As a visitor, I want to be able to know how to play the quiz          | As a visitor, I can see there are instructions on how to play the quiz         | PASS   |
+| As a visitor, I want to be able to play the quiz                      | As a visitor, I can click on the start quiz button to start the quiz           | PASS   |
+| As a visitor, I want to be able to see my quiz results                | As a visitor, I can see my retuls during the game and at the end of the quiz   | PASS   |
+
 ### Functionality
 
+| Feature                  | Expected outcome                                                                                                 | Action                                        | Result |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------- | ------ |
+| Start quiz button        | When clicked it starts the quiz                                                                                  | Clicked the start quiz button                 | PASS   |
+| View instructions button | When clicked it shows the instructions                                                                           | Clicked the view instructions button          | PASS   |
+| Wrong answer button      | When clicked it shows the correct answer                                                                         | Clicked the button of the wrong answer        | PASS   |
+| Correct answer button    | When clicked it shows the answer clicked is correct                                                              | Clicked the button of the correct answer      | PASS   |
+| Answer button            | When clicked it shows the reponse and disables the answer buttons and enables the next question button           | Clicked an answer button                      | PASS   |
+| Next question button     | When clicked it shows the next question and answers and disables the next question button                        | Clicked the next question button              | PASS   |
+| View results             | On the last question, when clicked it shows your results                                                         | Clicked the view results button               | PASS   |
+| Page not found page      | When the incorrect web page address is entered, is produces a 404 page which guides users back to the index page | Visited a page that doesn't exist in the site | PASS   |
+
+## JavaScript tests
+
+When developing the site I regularly console logged results to ensure that the expected results were displayed. 
 
 ### HTML Validation
 
-The [index.html](index.html) page was tested using the [W3C HTML validator](https://validator.w3.org/nu/) and no errors were found. The results are in the [HTML validation results PDF](assets/documents/html-validation.pdf).
+The [index.html](index.html) and [404](404.html) pages were tested using the [W3C HTML validator](https://validator.w3.org/nu/) and no errors were found. The results are in the [Quiz page HTML validation results PDF](assets/documents/html-validation.pdf) and [404 page HTML validator results PDF](assets/documents/html-validation-404.pdf).
 
 ### CSS Validation
 
@@ -102,10 +123,32 @@ The CSS stylesheet [style.css](assets/css/style.css) was checked using the [W3C 
 
 ### Accessibility and Performance
 
+Accessibility was checked to ensure that Aria labels and image alt text was added to all images and visual elements on the site.
+
+Lighthouse reports were also created on desktop and mobile which passed accessibility except sequential headings as h5 was used in the card sectionas recommended by Bootstrap. Changing this to h2 would change the look of the quiz but this could be looked at in future iterations. There were also a few performance suggestions which could be implemented in future iterations:
+- [Lighthouse report on index.html desktop page](assets/documents/lighthouse-report-quiz-desktop.pdf)
+- [Lighthouse report on index.html mobile page](assets/documents/lighthouse-report-quiz-mobile.pdf)
+- [Lighthouse report on 404.html desktop page](assets/documents/lighthouse-report-404-desktop.pdf)
+- [Lighthouse report on 404.html mobile page](assets/documents/lighthouse-report-404-mobile.pdf)
+
 ### Browser Compatibility
+
+The website has been tested on the following browsers:
+- Google Chrome Version 116.0.5845.141 (Official Build) (64-bit)
+- Microsoft Edge Version 118.0.2088.46 (Official build) (64-bit)
+- Mozilla Firefox Version 115.0.3 (64-bit)
+
+The layout, functionality and website works on all the above browsers.
+
 ### Device Compatibility
 
+The responsiveness and layout of the site has been tested on a number of devices including tablets, desktops and mobile phones from iPhone 5 to 5K screens and the website displays correctly.
+
+Chrome developer tools were used at various points during the development including when changes were made to the layout.
+
 ### Check links work
+
+Button links were JavaScript based so the console was used in Chrome Developer tools to ensure they worked correctly and went to the correct part of the quiz.
 
 ## Bugs
 
@@ -117,9 +160,23 @@ Bugs fixed:
 
 ### How the site was deployed
 
+The site was deployed using GitHub and is hosted on GitHub Pages and was deployed as follows:
+
+- Navigate to the [GitHub repository](https://github.com/cshimvin/quiz-ms-2)
+- Go to the **Settings** section
+- Click on **Pages** on the left hand side menu
+- Under **Branch**, select the **Master** branch then click Save
+- After a few minutes a link to the deployed site will appear at the top of the page
+- Any changes pushed to the main branch will take effect on the deployed site
 
 ### How to clone this repository
 
+- Go to the repository at https://github.com/cshimvin/quiz-ms-2 on GitHub
+- Click on the **Code** button and copy the https URL under **Clone**
+- Open a terminal on GitBash
+- Navigate to the folder you want to store the cloned repository
+- In the terminal type `git clone` and paste the URL of the cloned repository after it then press Enter
+- The site will then be cloned to that directory
 
 ## Credits
 
