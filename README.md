@@ -78,6 +78,8 @@ These are the features that have already been implemented on the website.
 - [Google Fonts](https://fonts.google.com/) was used to display the typography of the site: [Montserrat](https://fonts.google.com/specimen/Montserrat) and [REM](https://fonts.google.com/specimen/REM).
 - [Git](https://git-scm.com/) was used for version control of the code.
 - [GitHub](https://github.com/) was used as a repository for the code and GitHub pages was used to host the site.
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) to create the functionality of the site
+- [JQuery 3.7.1](https://jquery.com/) was used for selecting and manipulating elements in the DOM
 
 ## Testing
 
