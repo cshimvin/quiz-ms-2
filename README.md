@@ -1,8 +1,12 @@
 
 # Milestone Project 2: Airport Codes Quiz
-Website shown on various devices
-## Live project
-View the live project.
+
+![Website shown on various devices](assets/image/responsive.jpg)
+
+## Live Project
+
+[View the live project](https://cshimvin.github.io/quiz-ms-2/)
+
 ## Table of Contents
 1. [Project Goals](#project-goals)
 - Business Goals
@@ -84,7 +88,11 @@ These are the features that have already been implemented on the website.
 
 ### HTML Validation
 
+The [index.html](index.html) page was tested using the [W3C HTML validator](https://validator.w3.org/nu/) and no errors were found. The results are in the [HTML validation results PDF](assets/documents/html-validation.pdf).
+
 ### CSS Validation
+
+The CSS stylesheet [style.css](assets/css/style.css) was checked using the [W3C CSS validator](https://jigsaw.w3.org/css-validator/) and no errors were found. The results can be found in the [CSS validation results PDF](assets/documents/css-validation.pdf).
 
 ### JS Validation
 
@@ -117,4 +125,10 @@ Bugs fixed:
 
 ### Images
 
+Any images not referenced are owned by the developer. Background image was obtained from pxhere.com and is Free for personal and commercial use. No attribution required.
+
+Background image - https://pxhere.com/en/photo/1245082
+
 ### Code
+
+Shuffle answer order - Array randomiser function in script.js is taken from W3docs https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
