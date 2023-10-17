@@ -88,6 +88,10 @@ These are the features that have already been implemented on the website.
 
 ### JS Validation
 
+[JSHint](https://jshint.com/) was used to validate the JavaScript for script.js using the configuration to assume ES6 and jQuery. The validator identified 3 statements without semicolons which were corrected and the script.js file then passed validation.
+
+![JSHint validator sesults](assets/image/jshint-output.jpg)
+
 ### Accessibility and Performance
 
 ### Browser Compatibility
@@ -98,7 +102,8 @@ These are the features that have already been implemented on the website.
 ## Bugs
 
 Bugs fixed:
-Issue with incrementing questions and checkAnswer function
+- Issue with incrementing questions and checkAnswer function in script.js - the _questionNum++_ statement was in the incorrect function which caused the quiz to increment the question number by a random number. This was moved to the checkAnswer function to correct this issue.
+- The CSS was not loading due to a typo in the href of the CSS link statment in index.html. This was fixed so it worked.
 
 ## Deployment
 

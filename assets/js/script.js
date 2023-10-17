@@ -1,5 +1,3 @@
-/*jslint maxlen: 130 */
-
 /** Question and answer set for the quiz */
 const questionSet = [
     {question: "Toronto",
@@ -34,7 +32,7 @@ const questionSet = [
     incorrectAnswers: ["BHM", "BIR", "BGM"]}
 ];
 
-/** Shuffle answer order - Array randomiser
+/** Shuffle answer order - Array randomiser function
  * taken from W3docs https://www.w3docs.com/snippets/javascript/how-to-randomize-shuffle-a-javascript-array.html
 */
 function randomise(values) {
@@ -52,12 +50,11 @@ function randomise(values) {
 }
 
 /** Initialise the game */
-
 let score = 0;
 let questionNum = 0;
 let answerButtons = "#answer1, #answer2, #answer3, #answer4";
 
-/** Instructions for the game */
+/** Function to display instructions for the game */
 function viewInstructions() {
     let instructionsHTML = `<h5 id="question-number" class="card-header">Instructions</h5>
     <p class="card-body">This quiz about airport codes consists of 10 questions. Each question gives you the name of an airport and there are 4 options to choose from. Select which answer you think is correct then press the next question button. The codes have been taken from the <a href="https://www.iata.org/en/services/codes/" target="_blank">IATA airport code standard.</a></p>
@@ -76,9 +73,9 @@ function runGame() {
     <button type="button" class="mb-2 answer btn btn-primary" id="answer4" onclick="checkAnswer(4)"></button>
     <div id="result">&nbsp;</div>
     <div id="nav-buttons">
-        <button type="button" class="mb-1 btn btn-dark" id="next-question">Next question</button>
+        <button type="button" class="mb-2 btn btn-dark" id="next-question">Next question</button>
     </div>
-    <div id="score"><p>Current score : <span id="current-score">${score}</span> out of 10.</p></div>`;
+    <div id="score"><p><strong>Current score:</strong> <span id="current-score">${score}</span> out of 10.</p></div>`;
     $(".question-box").html("");
     $(".question-box").html(gameHTML);
     if (questionNum > 9) {
@@ -93,6 +90,7 @@ function runGame() {
     }
 }
 
+/** End of game function which displays user results */
 function endGame() {
     let resultHTML = `<h5 id="question-number" class="card-header">Game over!</h5>
     <h6 class="card-body final-score"></h6>
@@ -116,9 +114,9 @@ function endGame() {
     score = 0;
     questionNum = 0;
     answerButtons = "#answer1, #answer2, #answer3, #answer4";
-
 }
 
+/** Function to wait for next question button to be clicked to continue game */
 function nextButton() {
     $("#next-question").click(function () {
         $("#result").text("");
@@ -126,7 +124,7 @@ function nextButton() {
     });
 }
 
-/** Get question data from object */
+/** Function to get question data from object */
 function getQuestionData(questionNum) {
     questionIsValid(questionNum);
     let answerSet = [].concat(questionSet[questionNum].correctAnswer, questionSet[questionNum].incorrectAnswers);
@@ -135,15 +133,14 @@ function getQuestionData(questionNum) {
     displayAnswers(shuffledAnswers);
 }
 
-/** Display the question destination */
+/** Function to display the question destination */
 function displayQuestion(questionNum) {
     questionIsValid(questionNum);
-
     $("#question-number").text(`Question number ${questionNum+1}`);
     $("#airport").text(questionSet[questionNum].question);
 }
 
-/** Test question number is valid */
+/** Function to test question number is valid */
 function questionIsValid(questionNum) {
     if (questionNum > 9 || questionNum < 0) {
     alert("Invalid question set");
@@ -151,32 +148,30 @@ function questionIsValid(questionNum) {
     }
 }
 
-/** Display the answer options */
+/** Function to display the answer options */
 function displayAnswers(answers) {
-    for (var i = 0; i < 4; i++) {
-        var answer = i + 1;
-        var answerDiv = "answer" + answer;
-        console.log("Clicked answer:" + answerDiv)
-        console.log(answer);
-        var answerId = "#" + answerDiv;
+    for (let i = 0; i < 4; i++) {
+        let answer = i + 1;
+        let answerDiv = "answer" + answer;
+        let answerId = "#" + answerDiv;
         $(answerId).text(answers[i]);
     }
     if (questionNum === 9) {
-    $("#nav-buttons").html('<button type="button" class="btn btn-dark" disabled="true" id="next-question">View results</button>')
+    $("#nav-buttons").html('<button type="button" class="btn btn-dark" disabled="true" id="next-question">View results</button>');
     }
 }
 
-/** Check if user's answer is correct */
+/** Function to check if user's answer is correct */
 function checkAnswer(id) {
     let answerId = "#answer" + id;
     let answerSelected = $(answerId).text();
     let correctAnswer = questionSet[questionNum].correctAnswer;
     if (correctAnswer === answerSelected) {
-        $("#result").html(`<p>Correct! Well done!</p>`)
+        $("#result").html(`<p>Correct! Well done!</p>`);
         $(answerId).addClass("btn-success");
         score = score + 1;
     } else {
-        $("#result").html(`<p>Wrong, I'm afraid. The correct answer is ${correctAnswer}</p>`)
+        $("#result").html(`<p>Wrong, I'm afraid. The correct answer is ${correctAnswer}</p>`);
         $(answerId).addClass("btn-danger");
     }
     $(answerButtons).prop("disabled", true);
@@ -184,4 +179,3 @@ function checkAnswer(id) {
     $("#current-score").text(score);
     questionNum++;
 }
-
