@@ -64,6 +64,8 @@ As a visitor, I would like the website to:
 
 ### Design and Structure
 
+The website consists of 2 pages ([index.html](index.html) and [404.html](404.html)) which both have a consistent structure and design. The background image was designed to convey the fact it is a quiz relating to aviation and the blue colour allowed for a good contrast between text and background. The main goal is to test a user's knowledge on airport codes.
+
 ### Wireframes
 
 Wireframes of the initial design can be found in the PDF.
@@ -74,10 +76,64 @@ Wireframes of the initial design can be found in the PDF.
 
 These are the features that have already been implemented on the website.
 
+#### Main title
+
+This shows what the website is about: An airport codes quiz.
+
+![Main title - Airport codes quiz](assets/image/page-heading.png)
+
+#### Welcome card
+
+This shows what the website is about and provides 2 buttons to start the game and to view the instructions.
+
+![Welcome card screen](assets/image/main-welcome.png)
+
+#### Instructions card
+
+This shows how to play the game and a link to where the question data has come from to show that it is genuine and accurate. There is also a button to start the game.
+
+![Instructions card](assets/image/instructions-card.png)
+
+#### Question card
+
+This comprises of two states:
+- Display the question and options
+
+![Quiz question and answer options](assets/image/quiz-question.png)
+
+- Display the result once user clicks the answer button. Either correct or incorrect
+
+![Correct answer](assets/image/quiz-question-correct.png)
+![Incorrect answer](assets/image/quiz-question-incorrect.png)
+
+#### Quiz final result card
+
+Once the questions have been answered, the result is given together with a comment on the user's performance. It also gives the user the opportunity to try again.
+
+![Quiz result](assets/image/game-result.png)
+
+#### 404 error page
+
+If a user goes to a non-existent page, a 404 page is displayed which directs the user back to the quiz home page.
+
+![404 page](assets/image/404.png)
 
 ### Features the site could have
 
+If there was more time available in this phase, the following features could be implemented:
+
+- More questions could be added to the object together with a random question selector to provide greater variety.
+- There could be a footer with developer contact information and social media links.
+- There could be a start again button during the quiz if a user wants to start the quiz again without finishing it.
+
 ### Features the site won't have (for now)
+
+Features that could be implemented in future iterations:
+
+- Different question sets for different parts of the world.
+- Ability for the user to select their level of difficulty.
+- A graphical representation of how well the user is doing in the quiz (e.g. an aircraft taking off, in flight and landing).
+- Other aircraft-related quiz types could be added.(e.g. airline codes)
 
 ## Technologies Used
 
