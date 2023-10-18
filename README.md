@@ -35,13 +35,17 @@
 
 ## Project Goals
 
-### Business Goals
+### Developer Goals
 
-As a business, I would like the website to:
+As a developer, I would like the website to be fun and interactive and enable visitors to learn about airport codes of the world. This would be particularly useful for those visitors who are planning to join the aviaton industry.
 
 ### Visitor Goals
 
 As a visitor, I would like the website to:
+- be easy to understand
+- be easy to navigate
+- be able to use the quiz on a variety of devices
+- enable me to learn about airport codes and test my knowledge on them
 
 ## User Experience
 
