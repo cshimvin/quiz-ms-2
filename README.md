@@ -50,11 +50,17 @@ As a visitor, I would like the website to:
 ## User Experience
 
 ### User Stories
-- First time visitor goals
+- First time visitor goals:
+  - As a first time visitor, I would like to be able to find out what the site is about.
+  - As a first time visitor, I would like to know what the quiz is about and how to play it.
+  - As a first time visitor, I would like to take part in the quiz and get my results to see how well I did.
 
-- Returning visitor goals
+- Returning visitor goals:
+  - As a returning visitor, I would like to try the quiz again to see if I can get a better score.
+  - As a returning visitor, I would like to be able to remember the airport codes that were presented.
 
-- Frequent visitor goals
+- Frequent visitor goals:
+  - As a frequent visitor, I would like to keep testing my knowledge on airport codes and get a better score each time.
 
 ### Design and Structure
 
