@@ -94,7 +94,7 @@ function runGame() {
 function endGame() {
     let resultHTML = `<h5 id="question-number" class="card-header">Game over!</h5>
     <h6 class="card-body final-score"></h6>
-    <div id="score"></div><button type="button" class="mb-2 answer btn btn-primary" onclick="runGame()">Try again</button>`;
+    <div id="score"></div><button type="button" class="mt-3 mb-2 answer btn btn-primary" onclick="runGame()">Try again</button>`;
     $(".question-box").html("");
     $(".question-box").html(resultHTML);
     if (score === 10) {
