@@ -37,7 +37,7 @@
 
 ### Developer Goals
 
-As a developer, I would like the website to be fun and interactive and enable visitors to learn about airport codes of the world. This would be particularly useful for those visitors who are planning to join the aviaton industry.
+As a developer, I would like the website to be fun and interactive and enable visitors to learn about airport codes of the world. This would be particularly useful for those visitors who are planning to join the aviation industry.
 
 ### Visitor Goals
 
@@ -156,7 +156,7 @@ Features that could be implemented in future iterations:
 | As a visitor, I would like to easily find out about the site is about | As a visitor, I can understand that this is a quiz website about airport codes | PASS   |
 | As a visitor, I want to be able to know how to play the quiz          | As a visitor, I can see there are instructions on how to play the quiz         | PASS   |
 | As a visitor, I want to be able to play the quiz                      | As a visitor, I can click on the start quiz button to start the quiz           | PASS   |
-| As a visitor, I want to be able to see my quiz results                | As a visitor, I can see my retuls during the game and at the end of the quiz   | PASS   |
+| As a visitor, I want to be able to see my quiz results                | As a visitor, I can see my results during the game and at the end of the quiz   | PASS   |
 
 ### Functionality
 
@@ -166,7 +166,7 @@ Features that could be implemented in future iterations:
 | View instructions button | When clicked it shows the instructions                                                                           | Clicked the view instructions button          | PASS   |
 | Wrong answer button      | When clicked it shows the correct answer                                                                         | Clicked the button of the wrong answer        | PASS   |
 | Correct answer button    | When clicked it shows the answer clicked is correct                                                              | Clicked the button of the correct answer      | PASS   |
-| Answer button            | When clicked it shows the reponse and disables the answer buttons and enables the next question button           | Clicked an answer button                      | PASS   |
+| Answer button            | When clicked it shows the response and disables the answer buttons and enables the next question button           | Clicked an answer button                      | PASS   |
 | Next question button     | When clicked it shows the next question and answers and disables the next question button                        | Clicked the next question button              | PASS   |
 | View results             | On the last question, when clicked it shows your results                                                         | Clicked the view results button               | PASS   |
 | Page not found page      | When the incorrect web page address is entered, is produces a 404 page which guides users back to the index page | Visited a page that doesn't exist in the site | PASS   |
@@ -187,13 +187,13 @@ The CSS stylesheet [style.css](assets/css/style.css) was checked using the [W3C 
 
 [JSHint](https://jshint.com/) was used to validate the JavaScript for script.js using the configuration to assume ES6 and jQuery. The validator identified 3 statements without semicolons which were corrected and the script.js file then passed validation.
 
-![JSHint validator sesults](assets/image/jshint-output.jpg)
+![JSHint validator results](assets/image/jshint-output.jpg)
 
 ### Accessibility and Performance
 
 Accessibility was checked to ensure that Aria labels and image alt text was added to all images and visual elements on the site.
 
-Lighthouse reports were also created on desktop and mobile which passed accessibility except sequential headings as h5 was used in the card sectionas recommended by Bootstrap. Changing this to h2 would change the look of the quiz but this could be looked at in future iterations. There were also a few performance suggestions which could be implemented in future iterations:
+Lighthouse reports were also created on desktop and mobile which passed accessibility except sequential headings as h5 was used in the card section as recommended by Bootstrap. Changing this to h2 would change the look of the quiz but this could be looked at in future iterations. There were also a few performance suggestions which could be implemented in future iterations:
 - [Lighthouse report on index.html desktop page](assets/documents/lighthouse-report-quiz-desktop.pdf)
 - [Lighthouse report on index.html mobile page](assets/documents/lighthouse-report-quiz-mobile.pdf)
 - [Lighthouse report on 404.html desktop page](assets/documents/lighthouse-report-404-desktop.pdf)
@@ -222,7 +222,7 @@ Button links were JavaScript based so the console was used in Chrome Developer t
 
 Bugs fixed:
 - Issue with incrementing questions and checkAnswer function in script.js - the _questionNum++_ statement was in the incorrect function which caused the quiz to increment the question number by a random number. This was moved to the checkAnswer function to correct this issue.
-- The CSS was not loading due to a typo in the href of the CSS link statment in index.html. This was fixed so it worked.
+- The CSS was not loading due to a typo in the href of the CSS link statement in index.html. This was fixed so it worked.
 
 ## Deployment
 
