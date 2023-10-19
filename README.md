@@ -68,7 +68,7 @@ The website consists of 2 pages ([index.html](index.html) and [404.html](404.htm
 
 ### Wireframes
 
-Wireframes of the initial design can be found in the PDF.
+Wireframes of the initial design can be found in the [wireframes PDF](assets/documents/quiz-wireframes.pdf).
 
 ## Features
 
