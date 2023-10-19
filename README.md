@@ -177,7 +177,7 @@ When developing the site I regularly console logged results to ensure that the e
 
 ### HTML Validation
 
-The [index.html](index.html) and [404](404.html) pages were tested using the [W3C HTML validator](https://validator.w3.org/nu/) and no errors were found. The results are in the [Quiz page HTML validation results PDF](assets/documents/html-validation.pdf) and [404 page HTML validator results PDF](assets/documents/html-validation-404.pdf).
+The [index.html](index.html) and [404](404.html) pages were tested using the [W3C HTML validator](https://validator.w3.org/nu/) and no errors were found. The results are in the [Quiz page HTML validation results PDF](assets/documents/html-validation-quiz.pdf) and [404 page HTML validator results PDF](assets/documents/html-validation-404.pdf).
 
 ### CSS Validation
 
